@@ -5,3 +5,10 @@ You may assume that each input would have exactly one solution, and you may not 
 
 You can return the answer in any order.
 '''
+
+def Two_Sum(nums, target):
+    hashmap = {}
+    for i, num in enumerate(nums):
+        if hashmap.get(target - num) is not None:
+            return [i, hashmap.get(target - num)]
+        hashmap[num] = i
